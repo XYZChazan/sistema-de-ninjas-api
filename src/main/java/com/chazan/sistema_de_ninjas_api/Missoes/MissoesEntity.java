@@ -3,6 +3,8 @@ package com.chazan.sistema_de_ninjas_api.Missoes;
 import com.chazan.sistema_de_ninjas_api.Ninjas.Entity.NinjaEntity;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tb_missoes")
 public class MissoesEntity {
@@ -13,7 +15,11 @@ public class MissoesEntity {
     private String nome;
     private String dificuldade;
     private String local;
-    private NinjaEntity ninja;
+
+    // Nesse contexto o OneToMany representa 1 missão para vários ninjas, ou seja 1 ninjá só
+    //pode fazer 1 missão por vez
+    @OneToMany(mappedBy = "missoes")
+    private List<NinjaEntity> ninja;
 
     public MissoesEntity() {
     }

@@ -19,7 +19,12 @@ public class NinjaEntity {
     private String nome;
     private String email;
     private int idade;
-    private List<MissoesEntity> missoes;
+
+    // Nesse contexto o ManyToOne representa vários ninjas para 1 missão
+    @ManyToOne()
+    // Foreing Key ou chave estrangeira
+    @JoinColumn(name = "missoes_id")
+    private MissoesEntity missoes;
 
     public NinjaEntity() {
     }
