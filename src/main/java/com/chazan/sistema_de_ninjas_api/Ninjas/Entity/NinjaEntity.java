@@ -1,6 +1,9 @@
-package com.chazan.sistema_de_ninjas_api;
+package com.chazan.sistema_de_ninjas_api.Ninjas.Entity;
 
+import com.chazan.sistema_de_ninjas_api.Missoes.MissoesEntity;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 //JPA = Java Persistence API
 
@@ -16,6 +19,7 @@ public class NinjaEntity {
     private String nome;
     private String email;
     private int idade;
+    private List<MissoesEntity> missoes;
 
     public NinjaEntity() {
     }

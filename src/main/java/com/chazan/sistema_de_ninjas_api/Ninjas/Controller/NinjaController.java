@@ -1,4 +1,4 @@
-package com.chazan.sistema_de_ninjas_api;
+package com.chazan.sistema_de_ninjas_api.Ninjas.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
